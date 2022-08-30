@@ -3,8 +3,8 @@ require 'gosu'
 
 class Play
   def initialize
-    @player_x = Gosu::Image.new("tic_tac_toe/x.png")
-    @player_o = Gosu::Image.new("tic_tac_toe/o.png")    
+    @player_x = Gosu::Image.new("x.png")
+    @player_o = Gosu::Image.new("o.png")    
   end
   
   def valid (game_state, button)
@@ -81,7 +81,7 @@ class Tic_tac_toe < Gosu::Window
       :seven => [0, 333.5, 141.5, 478.5],
       :eight => [180, 333.5, 300, 478.5],
       :nine => [339.5, 333.5, 480, 478.5]}
-    @background_image = Gosu::Image.new("tic_tac_toe/game_board.png", :tileable => true)
+    @background_image = Gosu::Image.new("game_board.png", :tileable => true)
     @play = Play.new
     @game_state = [0,0,0,0,0,0,0,0,0]
     @turn = 0
